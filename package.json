@@ -1,0 +1,26 @@
+{
+  "name": "smart-city-iot",
+  "version": "0.0.1",
+  "description": "IOT Data API using Cassandra DB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start:prod": "node server.js"
+  },
+  "keywords": [
+    "iot",
+    "cassandra"
+  ],
+  "author": "Shreyash",
+  "license": "MIT",
+  "packageManager": "pnpm@10.5.2",
+  "dependencies": {
+    "cassandra-driver": "^4.8.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
