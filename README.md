@@ -4,5 +4,5 @@ A Smart City IoT Data API that registers sensors and ingests time-stamped readin
 
 ## Tech Used
 
-1. Cassandra Database
+1. Apache Cassandra
 2. Node.js & Express

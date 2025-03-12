@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "IOT Data API using Cassandra DB",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon server.js",
     "start:prod": "node server.js"
