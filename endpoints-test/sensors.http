@@ -1,0 +1,18 @@
+POST http://localhost:3000/sensors 
+Content-Type: application/json
+
+{
+    "sensor_id": "aqi-001",
+    "type": "air_quality",
+    "location": { "lat": 40.7128, "lng": -79.0060 },
+    "description": "Subway air quality monitor"
+}
+
+###
+
+GET http://localhost:3000/sensors 
+
+
+###
+
+GET http://localhost:3000/sensors/aqi-001

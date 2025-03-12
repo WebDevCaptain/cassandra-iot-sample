@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 
 import { initDb } from "./config/cassandra.js";
+import { sensorReadingRouter, sensorRouter } from "./routes/index.js";
 
 const app = express();
 
@@ -11,8 +12,11 @@ app.use(express.json());
 // Logger middleware (logs requests to console)
 app.use(morgan("dev"));
 
+app.use("/sensors", sensorRouter);
+app.use("/sensors/:sensor_id/readings", sensorReadingRouter);
+
 // A simple route for healthcheck
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.send("Smart City IoT Data API is up and running !!");
 });
 

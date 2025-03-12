@@ -1,0 +1,23 @@
+POST http://localhost:3000/sensors/aqi-001/readings
+Content-Type: application/json
+
+{
+    "timestamp": "2025-03-12T00:00:00Z",
+    "value": 22.16,
+    "unit": "PPM",
+    "status": "ok"
+}
+
+###
+
+GET http://localhost:3000/sensors/aqi-001/readings
+
+
+###
+
+GET http://localhost:3000/sensors/aqi-001/readings?start=2025-03-11T09:30:00Z&end=2025-03-11T11:30:00Z
+
+
+###
+
+GET http://localhost:3000/sensors/aqi-001/readings/aggregates
