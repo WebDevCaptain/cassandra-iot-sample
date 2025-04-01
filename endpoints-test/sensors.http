@@ -1,3 +1,4 @@
+# Register a new sensor
 POST http://localhost:3000/sensors 
 Content-Type: application/json
 
@@ -10,9 +11,11 @@ Content-Type: application/json
 
 ###
 
+# Retrieve a list of all registered sensors
 GET http://localhost:3000/sensors 
 
 
 ###
 
+# Get details for a specific sensor by its IDGet details for a specific sensor by its ID
 GET http://localhost:3000/sensors/aqi-001

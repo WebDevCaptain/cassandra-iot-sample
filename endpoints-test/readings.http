@@ -1,3 +1,4 @@
+# Store a new sensor reading
 POST http://localhost:3000/sensors/aqi-001/readings
 Content-Type: application/json
 
@@ -10,6 +11,7 @@ Content-Type: application/json
 
 ###
 
+# Retrieve sensor readings, with optional query parameters for filtering by time range like start & end
 GET http://localhost:3000/sensors/aqi-001/readings
 
 
@@ -20,4 +22,5 @@ GET http://localhost:3000/sensors/aqi-001/readings?start=2025-03-11T09:30:00Z&en
 
 ###
 
+# Retrieve aggregated sensor readings
 GET http://localhost:3000/sensors/aqi-001/readings/aggregates
