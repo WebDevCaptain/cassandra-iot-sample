@@ -43,3 +43,21 @@ A Smart City IoT Data API that registers sensors and ingests time-stamped readin
 
 1. Apache Cassandra (v5.x)
 2. Node.js & Express with DataStax Cassandra Driver
+
+---
+
+## Why use Cassandra for this IoT system ????
+
+> Compared to Traditional Databases (MySQL/Postgres) and MongoDB
+
+- **High Write Throughput:** Cassandra is designed to handle many writes per second (with very low latency), which is ideal for time-series sensor data. Can easily load balance across multiple nodes in a Cluster...
+
+- **Scalability:** It scales horizontally very easily; new nodes can be added without downtime (Mongo can also do this)
+
+- **Distributed Architecture:** There is no single point of failure. Data is automatically replicated across multiple nodes (No master/slave setup)
+
+- **Tunable Consistency** You can balance between consistency and performance by choosing the right consistency level
+
+- **Time-Series Support:** With its partition and clustering keys, Cassandra naturally supports time-series data models..
+
+- **Built-In TTL ** Easily set expiration times on data, automatically cleaning up old sensor readings (caches like Valkey(Redis), Memcached do this often)
