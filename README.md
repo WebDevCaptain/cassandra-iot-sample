@@ -60,7 +60,7 @@ A Smart City IoT Data API that registers sensors and ingests time-stamped readin
 
 - **Time-Series Support:** With its partition and clustering keys, Cassandra naturally supports time-series data models..
 
-- **Built-In TTL ** Easily set expiration times on data, automatically cleaning up old sensor readings (caches like Valkey(Redis), Memcached do this often)
+- **Built-In TTL** Easily set expiration times on data, automatically cleaning up old sensor readings (caches like Valkey(Redis), Memcached do this often)
 
 ---
 
@@ -97,3 +97,9 @@ A Smart City IoT Data API that registers sensors and ingests time-stamped readin
 8. **Tombstone:**
 
 - A tombstone is a special marker in Cassandra that indicates that a row has been deleted. It is used to optimize read performance by skipping deleted rows.
+
+---
+
+## License
+
+This repo is released under the [MIT License](LICENSE) and can be used for any purpose.
