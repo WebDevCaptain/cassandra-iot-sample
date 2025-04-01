@@ -66,6 +66,10 @@ A Smart City IoT Data API that registers sensors and ingests time-stamped readin
 
 ## Key Cassandra internals:-
 
+[Architecture](https://cassandra.apache.org/doc/latest/cassandra/architecture/index.html#architecture/snitch.adoc)
+
+![Cassandra Cluster](https://cassandra.apache.org/_/_images/diagrams/apache-cassandra-diagrams-01.jpg)
+
 1. **P2P Architecture:**
 
 - Every node in the Cassandra cluster is equal. There is no master node.
