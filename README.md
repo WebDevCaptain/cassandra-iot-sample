@@ -61,3 +61,39 @@ A Smart City IoT Data API that registers sensors and ingests time-stamped readin
 - **Time-Series Support:** With its partition and clustering keys, Cassandra naturally supports time-series data models..
 
 - **Built-In TTL ** Easily set expiration times on data, automatically cleaning up old sensor readings (caches like Valkey(Redis), Memcached do this often)
+
+---
+
+## Key Cassandra internals:-
+
+1. **P2P Architecture:**
+
+- Every node in the Cassandra cluster is equal. There is no master node.
+
+2. **Partitioning:**
+
+- Data is divided across nodes using partition keys, ensuring balanced load
+
+3. **Replication:**
+
+- Data is replicated across multiple nodes. The replication factor is configurable
+
+4. **Consistency Levels:**
+
+- Cassandra lets user choose the consistency level for each operation, balancing performance and data accuracy.
+
+5. **Write Path:**
+
+- Writes are fast because data is first written to a commit log, and then stored in an in-memory table (SST, memtable) before being flushed to disk.
+
+6. **Read Path:**
+
+- Uses SSTables (Sorted String Table or SST) and bloom filters to quickly locate data on disk.
+
+7. **Compaction:**
+
+- Compaction is a process that merges SSTables to reduce disk usage and improve performance. It is automatically triggered when the number of SSTables exceeds a certain threshold (as a batch process)
+
+8. **Tombstone:**
+
+- A tombstone is a special marker in Cassandra that indicates that a row has been deleted. It is used to optimize read performance by skipping deleted rows.
